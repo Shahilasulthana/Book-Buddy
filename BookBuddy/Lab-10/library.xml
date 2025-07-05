@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Library SYSTEM "library.dtd">
+<Library>
+    <Book>
+        <Title>The Great Gatsby</Title>
+        <Author>F. Scott Fitzgerald</Author>
+        <ISBN>9780743273565</ISBN>
+        <Year>1925</Year>
+        <Genre>Fiction</Genre>
+    </Book>
+    <Book>
+        <Title>1984</Title>
+        <Author>George Orwell</Author>
+        <ISBN>9780451524935</ISBN>
+        <Year>1949</Year>
+        <Genre>Dystopian</Genre>
+    </Book>
+</Library>

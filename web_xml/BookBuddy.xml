@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookbuddy SYSTEM "bookbuddy.dtd">
+<bookbuddy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="bookbuddy.xsd">
+    <slider>
+        <slide>
+            <image>./assets/Book Buddy.jpeg</image>
+            <title>Discover</title>
+            <description>Find your next favorite book</description>
+        </slide>
+        <slide>
+            <image>./assets/Love Reading.jpeg</image>
+            <title>LOVE</title>
+            <description>Share the Joy of Reading<br/>Connect with fellow book lovers in our community</description>
+        </slide>
+        <slide>
+            <image>./assets/wmremove-transformed (2).jpeg</image>
+            <title>Grow</title>
+            <description>Expand your reading horizons</description>
+        </slide>
+    </slider>
+    <content>
+        <marquee>📚 Welcome to Book Buddy - Your Literary Companion 📚</marquee>
+        <sections>
+            <section>
+                <title>Read📖 | Share🤝 | Grow📈</title>
+                <subtitle>Hello Readers!</subtitle>
+                <text>🌟 We're thrilled to have you here! Taking a step towards a shared love for books is a remarkable journey, and you're now part of an amazing community of passionate readers.</text>
+            </section>
+            <section type="about">
+                <title>What We're About</title>
+                <items>
+                    <item><strong>Explore:</strong> Discover a wide range of books from diverse genres.</item>
+                    <item><strong>Share:</strong> Exchange your favorite reads with others in the community.</item>
+                    <item><strong>Grow:</strong> Gain new insights, perspectives, and ideas through shared knowledge.</item>
+                    <item><strong>Connect:</strong> Build friendships with fellow book lovers who share your passions.</item>
+                    <item><strong>Discover:</strong> Find hidden literary gems recommended by our community.</item>
+                </items>
+            </section>
+            <section type="why">
+                <title>Why Choose Book Buddy?</title>
+                <items>
+                    <item>✨ Expand Your Collection: Find books you've always wanted to read.</item>
+                    <item>✨ Connect with Readers: Meet like-minded book lovers and share your insights.</item>
+                    <item>✨ Eco-Friendly Reading: Promote sustainability by sharing instead of buying new.</item>
+                    <item>✨ Personalized Recommendations: Get suggestions based on your reading preferences.</item>
+                    <item>✨ Reading Challenges: Participate in fun challenges to expand your horizons.</item>
+                </items>
+            </section>
+        </sections>
+    </content>
+</bookbuddy>

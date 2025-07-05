@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Genres | Book Buddy</title>
+    <link rel="icon" href="./assets/bookshare images.webp" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "BookList_style.css">
+  </head>
+
+  <body>
+    <div class="Book-container">
+      <h1>Hey Buddy... It's great to see you here!</h1>
+      <h2>Get the books of your interest from Book Buddy, your always reading and sharing partner</h2>
+    </div>
+
+    <div class="gallery-container">
+      <!-- Tech Books -->
+      <div class="genre-card" onclick="showGenre('tech')">
+        <img src="./assets/Technology.jpg" alt="Tech Books" />
+        <h2>Tech Books</h2>
+      </div>
+
+      <!-- Tales and Stories -->
+      <div class="genre-card" onclick="showGenre('tales')">
+        <img src="./assets/Tales.jpg" alt="Tales and Stories" />
+        <h2>Tales & Stories</h2>
+      </div>
+
+      <!-- Business Minds -->
+      <div class="genre-card" onclick="showGenre('business')">
+        <img src="./assets/Business applications.jpg" alt="Business Minds" />
+        <h2>Business Minds</h2>
+      </div>
+
+      <!-- Space -->
+      <div class="genre-card" onclick="showGenre('space')">
+        <img src="./assets/Space.jpg" alt="Space" />
+        <h2>Space</h2>
+      </div>
+
+      <!-- Science -->
+      <div class="genre-card" onclick="showGenre('science')">
+        <img src="./assets/Science.jpg" alt="Science" />
+        <h2>Science</h2>
+      </div>
+
+      <!-- Mathematics -->
+      <div class="genre-card" onclick="showGenre('math')">
+        <img src="./assets/Mathematics.jpg" alt="Mathematics" />
+        <h2>Mathematics</h2>
+      </div>
+
+      <!-- History -->
+      <div class="genre-card" onclick="showGenre('history')">
+        <img src="./assets/Hisroty.jpg" alt="History" />
+        <h2>History</h2>
+      </div>
+
+      <!-- Literature -->
+      <div class="genre-card" onclick="showGenre('literature')">
+        <img src="./assets/Love Reading.jpeg" alt="Literature" />
+        <h2>Literature</h2>
+      </div>
+    </div>
+
+    <!-- Tech Books Details -->
+    <div id="tech-details" class="book-details">
+      <div class="details-content">
+        <span class="close-btn" onclick="hideDetails()">&times;</span>
+        <h2 class="genre-title">Technology Books</h2>
+        <ul class="book-list">
+          <li class="book-item">
+            <h3 class="book-title">Clean Code: A Handbook of Agile Software Craftsmanship</h3>
+            <p class="book-author">Robert C. Martin</p>
+            <div class="book-meta">
+              <div class="meta-item">
+                <span class="meta-label">Available Copies</span>
+                <span class="meta-value">3</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Current Holders</span>
+                <span class="meta-value">
+                  John D. (Returns: 15/07/2024)<br>
+                  Sarah M. (Returns: 20/07/2024)<br>
+                  Alex P. (Returns: 10/08/2024)
+                </span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Location</span>
+                <span class="meta-value">
+                  New York, NY<br>
+                  Boston, MA<br>
+                  San Francisco, CA
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="book-item">
+            <h3 class="book-title">Design Patterns: Elements of Reusable Object-Oriented Software</h3>
+            <p class="book-author">Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides</p>
+            <div class="book-meta">
+              <div class="meta-item">
+                <span class="meta-label">Available Copies</span>
+                <span class="meta-value">2</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Current Holders</span>
+                <span class="meta-value">
+                  Michael B. (Returns: 18/07/2024)<br>
+                  Emily T. (Returns: 25/07/2024)
+                </span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Location</span>
+                <span class="meta-value">
+                  Chicago, IL<br>
+                  Seattle, WA
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tales and Stories Details -->
+    <div id="tales-details" class="book-details">
+      <div class="details-content">
+        <span class="close-btn" onclick="hideDetails()">&times;</span>
+        <h2 class="genre-title">Tales & Stories</h2>
+        <ul class="book-list">
+          <li class="book-item">
+            <h3 class="book-title">The Complete Fairy Tales of the Brothers Grimm</h3>
+            <p class="book-author">Jacob Grimm, Wilhelm Grimm</p>
+            <div class="book-meta">
+              <div class="meta-item">
+                <span class="meta-label">Available Copies</span>
+                <span class="meta-value">5</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Current Holders</span>
+                <span class="meta-value">
+                  Olivia K. (Returns: 12/07/2024)<br>
+                  James L. (Returns: 14/07/2024)<br>
+                  Sophia R. (Returns: 22/07/2024)
+                </span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Location</span>
+                <span class="meta-value">
+                  Austin, TX<br>
+                  Denver, CO<br>
+                  Portland, OR
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+        <!-- Business Minds Details -->
+        <div id="business-details" class="book-details">
+          <div class="details-content">
+            <span class="close-btn" onclick="hideDetails()">&times;</span>
+            <h2 class="genre-title">Business Minds</h2>
+            <ul class="book-list">
+              <li class="book-item">
+                <h3 class="book-title">Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones</h3>
+                <p class="book-author">James Clear</p>
+                <div class="book-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Available Copies</span>
+                    <span class="meta-value">4</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Current Holders</span>
+                    <span class="meta-value">
+                      David W. (Returns: 10/07/2024)<br>
+                      Emma S. (Returns: 15/07/2024)<br>
+                      Noah P. (Returns: 18/07/2024)
+                    </span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">
+                      Miami, FL<br>
+                      Atlanta, GA<br>
+                      Dallas, TX
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="book-item">
+                <h3 class="book-title">The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses</h3>
+                <p class="book-author">Eric Ries</p>
+                <div class="book-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Available Copies</span>
+                    <span class="meta-value">3</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Current Holders</span>
+                    <span class="meta-value">
+                      Ethan M. (Returns: 11/07/2024)<br>
+                      Ava L. (Returns: 20/07/2024)<br>
+                      Lucas G. (Returns: 25/07/2024)
+                    </span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">
+                      Phoenix, AZ<br>
+                      Philadelphia, PA<br>
+                      San Diego, CA
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <!-- Space Details -->
+        <div id="space-details" class="book-details">
+          <div class="details-content">
+            <span class="close-btn" onclick="hideDetails()">&times;</span>
+            <h2 class="genre-title">Space</h2>
+            <ul class="book-list">
+              <li class="book-item">
+                <h3 class="book-title">A Brief History of Time</h3>
+                <p class="book-author">Stephen Hawking</p>
+                <div class="book-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Available Copies</span>
+                    <span class="meta-value">2</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Current Holders</span>
+                    <span class="meta-value">
+                      Benjamin T. (Returns: 14/07/2024)<br>
+                      Chloe R. (Returns: 21/07/2024)
+                    </span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">
+                      Houston, TX<br>
+                      Orlando, FL
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="book-item">
+                <h3 class="book-title">Cosmos</h3>
+                <p class="book-author">Carl Sagan</p>
+                <div class="book-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Available Copies</span>
+                    <span class="meta-value">3</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Current Holders</span>
+                    <span class="meta-value">
+                      Henry W. (Returns: 16/07/2024)<br>
+                      Zoe K. (Returns: 19/07/2024)<br>
+                      Gabriel M. (Returns: 28/07/2024)
+                    </span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">
+                      Minneapolis, MN<br>
+                      Nashville, TN<br>
+                      Las Vegas, NV
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <!-- Science Details -->
+        <div id="science-details" class="book-details">
+          <div class="details-content">
+            <span class="close-btn" onclick="hideDetails()">&times;</span>
+            <h2 class="genre-title">Science & Psychology</h2>
+            <ul class="book-list">
+              <li class="book-item">
+                <h3 class="book-title">The Selfish Gene</h3>
+                <p class="book-author">Richard Dawkins</p>
+                <div class="book-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Available Copies</span>
+                    <span class="meta-value">4</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Current Holders</span>
+                    <span class="meta-value">
+                      Daniel F. (Returns: 13/07/2024)<br>
+                      Lily S. (Returns: 17/07/2024)<br>
+                      Mason P. (Returns: 24/07/2024)
+                    </span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">
+                      Detroit, MI<br>
+                      Cleveland, OH<br>
+                      Indianapolis, IN
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="book-item">
+                <h3 class="book-title">Thinking, Fast and Slow</h3>
+                <p class="book-author">Daniel Kahneman</p>
+                <div class="book-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Available Copies</span>
+                    <span class="meta-value">3</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Current Holders</span>
+                    <span class="meta-value">
+                      Harper L. (Returns: 15/07/2024)<br>
+                      Elijah W. (Returns: 22/07/2024)<br>
+                      Scarlett B. (Returns: 29/07/2024)
+                    </span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">
+                      Kansas City, MO<br>
+                      Columbus, OH<br>
+                      Charlotte, NC
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <!-- Mathematics Details -->
+        <div id="math-details" class="book-details">
+          <div class="details-content">
+            <span class="close-btn" onclick="hideDetails()">&times;</span>
+            <h2 class="genre-title">Mathematics</h2>
+            <ul class="book-list">
+              <li class="book-item">
+                <h3 class="book-title">A Mathematician's Apology</h3>
+                <p class="book-author">G.H. Hardy</p>
+                <div class="book-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Available Copies</span>
+                    <span class="meta-value">2</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Current Holders</span>
+                    <span class="meta-value">
+                      Jackson K. (Returns: 16/07/2024)<br>
+                      Avery M. (Returns: 23/07/2024)
+                    </span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">
+                      Milwaukee, WI<br>
+                      Oklahoma City, OK
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="book-item">
+                <h3 class="book-title">How to Solve It: A New Aspect of Mathematical Method</h3>
+                <p class="book-author">George Pólya</p>
+                <div class="book-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Available Copies</span>
+                    <span class="meta-value">3</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Current Holders</span>
+                    <span class="meta-value">
+                      Logan T. (Returns: 18/07/2024)<br>
+                      Madison R. (Returns: 21/07/2024)<br>
+                      Carter S. (Returns: 30/07/2024)
+                    </span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">
+                      Memphis, TN<br>
+                      Louisville, KY<br>
+                      Richmond, VA
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <!-- History Details -->
+        <div id="history-details" class="book-details">
+          <div class="details-content">
+            <span class="close-btn" onclick="hideDetails()">&times;</span>
+            <h2 class="genre-title">History</h2>
+            <ul class="book-list">
+              <li class="book-item">
+                <h3 class="book-title">Sapiens: A Brief History of Humankind</h3>
+                <p class="book-author">Yuval Noah Harari</p>
+                <div class="book-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Available Copies</span>
+                    <span class="meta-value">5</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Current Holders</span>
+                    <span class="meta-value">
+                      Evelyn C. (Returns: 12/07/2024)<br>
+                      Hudson B. (Returns: 15/07/2024)<br>
+                      Stella L. (Returns: 19/07/2024)
+                    </span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">
+                      Salt Lake City, UT<br>
+                      Tucson, AZ<br>
+                      Albuquerque, NM
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="book-item">
+                <h3 class="book-title">The Guns of August</h3>
+                <p class="book-author">Barbara W. Tuchman</p>
+                <div class="book-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Available Copies</span>
+                    <span class="meta-value">3</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Current Holders</span>
+                    <span class="meta-value">
+                      Wyatt H. (Returns: 14/07/2024)<br>
+                      Hazel N. (Returns: 20/07/2024)<br>
+                      Leo P. (Returns: 27/07/2024)
+                    </span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">
+                      Fresno, CA<br>
+                      Sacramento, CA<br>
+                      Mesa, AZ
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <!-- Literature Details -->
+        <div id="literature-details" class="book-details">
+          <div class="details-content">
+            <span class="close-btn" onclick="hideDetails()">&times;</span>
+            <h2 class="genre-title">Literature</h2>
+            <ul class="book-list">
+              <li class="book-item">
+                <h3 class="book-title">To Kill a Mockingbird</h3>
+                <p class="book-author">Harper Lee</p>
+                <div class="book-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Available Copies</span>
+                    <span class="meta-value">6</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Current Holders</span>
+                    <span class="meta-value">
+                      Violet M. (Returns: 11/07/2024)<br>
+                      Owen T. (Returns: 13/07/2024)<br>
+                      Penelope W. (Returns: 18/07/2024)
+                    </span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">
+                      Omaha, NE<br>
+                      Tulsa, OK<br>
+                      Oakland, CA
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li class="book-item">
+                <h3 class="book-title">1984</h3>
+                <p class="book-author">George Orwell</p>
+                <div class="book-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Available Copies</span>
+                    <span class="meta-value">4</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Current Holders</span>
+                    <span class="meta-value">
+                      Lincoln S. (Returns: 16/07/2024)<br>
+                      Eleanor R. (Returns: 19/07/2024)<br>
+                      Julian M. (Returns: 25/07/2024)
+                    </span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">
+                      Wichita, KS<br>
+                      Arlington, TX<br>
+                      New Orleans, LA
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+    <!-- Add similar detail sections for other genres -->
+
+    <script>
+      function showGenre(genre) {
+        document.getElementById(genre + '-details').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function hideDetails() {
+        document.querySelectorAll('.book-details').forEach(el => {
+          el.style.display = 'none';
+        });
+        document.body.style.overflow = 'auto';
+      }
+
+      // Close when clicking outside content
+      window.onclick = function(event) {
+        if (event.target.classList.contains('book-details')) {
+          hideDetails();
+        }
+      }
+    </script>
+  </body>
+</html>

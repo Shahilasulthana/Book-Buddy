@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BookBuddy - Login / Sign Up</title>
+  <link rel="icon" href="./assets/BookBuddyLogo.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href = "Login_style.css  ">
+</head>
+
+
+<body>
+<div class="container">
+  <h2>Welcome to Book Buddy</h2>
+
+  <div class="tabs">
+    <button id="loginTab" class="active" onclick="showTab('login')">Login</button>
+    <button id="signupTab" onclick="showTab('signup')">Sign Up</button>
+  </div>
+
+  <!-- Login Form -->
+  <div id="loginForm">
+    <input type="text" id="loginUsername" placeholder="Username">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button class="submit-btn" onclick="login()">Login</button>
+  </div>
+
+  <!-- Sign Up Form -->
+  <div id="signupForm" style="display: none;">
+    <input type="text" id="fullName" placeholder="Full Name">
+    <input type="email" id="signupEmail" placeholder="Email">
+    <input type="text" id="signupUsername" placeholder="Username">
+    <input type="password" id="signupPassword" placeholder="Password">
+    <button class="submit-btn" onclick="signup()">Sign Up</button>
+  </div>
+
+  <div class="social-login">
+    <p>Or continue with:</p>
+    <button class="google">Google</button>
+    <button class="linkedin">LinkedIn</button>
+  </div>
+
+  <p id="successMsg"></p>
+  <p id="errorMsg"></p>
+</div>
+
+
+<script>
+  let users = {
+    "shahila": "bismi"
+  };
+
+  function showTab(tab) {
+    document.getElementById("loginForm").style.display = tab === "login" ? "block" : "none";
+    document.getElementById("signupForm").style.display = tab === "signup" ? "block" : "none";
+
+    document.getElementById("loginTab").classList.toggle("active", tab === "login");
+    document.getElementById("signupTab").classList.toggle("active", tab === "signup");
+
+    document.getElementById("successMsg").textContent = '';
+    document.getElementById("errorMsg").textContent = '';
+  }
+
+  function login() {
+    const username = document.getElementById("loginUsername").value;
+    const password = document.getElementById("loginPassword").value;
+
+    if (users[username] && users[username] === password) {
+      document.getElementById("successMsg").textContent = "Login successful! Welcome back to Book Buddy!";
+      document.getElementById("errorMsg").textContent = "";
+    } else {
+      document.getElementById("errorMsg").textContent = "Invalid username or password.";
+      document.getElementById("successMsg").textContent = "";
+    }
+  }
+
+  function signup() {
+    const name = document.getElementById("fullName").value;
+    const email = document.getElementById("signupEmail").value;
+    const username = document.getElementById("signupUsername").value;
+    const password = document.getElementById("signupPassword").value;
+
+    if (username in users) {
+      document.getElementById("errorMsg").textContent = "Username already exists.";
+      return;
+    }
+
+    if (name && email && username && password) {
+      users[username] = password;
+      document.getElementById("successMsg").textContent = "Registration successful! You can now login.";
+      document.getElementById("errorMsg").textContent = "";
+
+      // Clear sign up form
+      document.getElementById("fullName").value = "";
+      document.getElementById("signupEmail").value = "";
+      document.getElementById("signupUsername").value = "";
+      document.getElementById("signupPassword").value = "";
+    } else {
+      document.getElementById("errorMsg").textContent = "Please fill in all fields.";
+      document.getElementById("successMsg").textContent = "";
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px gray;
+        }
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Login Form</h2>
+        <form onsubmit="return validateUser(event)">
+            <label>Username:</label>
+            <input type="text" id="username" required>
+
+            <label>Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">OK</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function validateUser(event) {
+            event.preventDefault(); // Prevent form submission
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let message = document.getElementById("message");
+
+            // Hardcoded valid credentials (You can replace this with a database check)
+            let validUsername = "admin";
+            let validPassword = "12345";
+
+            if (username !== validUsername) {
+                message.style.color = "red";
+                message.innerText = "❌ Invalid Username!";
+            } else if (password !== validPassword) {
+                message.style.color = "red";
+                message.innerText = "❌ Invalid Password!";
+            } else {
+                message.style.color = "green";
+                message.innerText = "✅ Authorized!";
+            }
+        }
+    </script>
+
+</body>
+</html>

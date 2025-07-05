@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Registration Form</title>
+<link rel="icon" href="C:\Users\ELCOT\Desktop\WEB DEVELOPMENT LAB\bookshare images.webp">
+<style>
+    body {
+      background-image: url('C:/Users/ELCOT/Desktop/WEB DEVELOPMENT LAB/perfect.avif');
+      background-size: cover; 
+      background-position: center; 
+      font-family: Arial, sans-serif; 
+      color: black; 
+}
+
+.Register{
+    padding:20px;
+    border:2px;
+    border-radius: 15%;
+    border-style: double;
+    border-color:brown;
+    display:inline-block;
+}
+
+.butt{
+    background-color: rgb(168, 102, 40);
+    align-content: center;
+}
+
+.butt:hover{
+    background-color:rgb(12, 224, 224);
+    color:white;
+}
+
+.change1:hover{
+    background-color: rgb(236, 167, 89);
+    color:white;
+}
+
+
+</style>
+</head>
+
+<body>
+<center>
+<div class="Register">
+<h2 id="Form"><i>Registration Form</i></h2>
+<form>
+<table>
+<tr>
+<td>Name</td>
+<td><input type="text" placeholder="Enter your name" class="change1"></td>
+</tr>
+
+<tr>
+<td>Age</td>
+<td><input type="number" placeholder="Enter your age" class="change1"></td>
+</tr>
+
+<tr>
+    <td>Date of Birth</td>
+    <td><input type="data" placeholder="DD-MM-YYYY" class="change1"></td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="Gender">Male
+<input type="radio" name="Gender">Female
+<input type="radio" name="Gender">Others
+</td>
+</tr>
+
+<tr>
+<td>EmailID</td>
+<td><input type="text" placeholder="Email Address" class="change1"></td>
+</tr>
+
+<tr>
+<td>Mobile No</td>
+<td><input type="number" placeholder="Mobile Number" class="change1"></td>
+</tr>
+
+<tr>
+<td>Role</td>
+<td>
+<select>
+<option>School student</option>
+<option>College student</option>
+<option>Employee</option>
+<option>Home maker</option>
+<option>Senior Citizen</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Area of Interest</td>
+<td>
+<select>
+<option>Business Applications</option>
+<option>Technology</option>
+<option>History</option>
+<option>Space</option>
+<option>Science</option>
+<option>Mathematics</option>
+<option>Literature</option>
+<option>Tales</option>
+<option>Other</option>
+</select>
+</td>
+</tr>
+
+<tr>
+    <td>Residential Address</td>
+    <td><input type="text" placeholder="Address" class="change1"></td>
+</tr>
+
+<tr>
+    <td>About Yourself</td>
+    <td><textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message" class="change1"></textarea>
+</tr>
+
+<tr class="level">
+    <td>Your level of Experience in reading books</td>
+    <td><progress class="progress-bar" value="30" max="100"></progress></td>
+</tr>
+
+
+<tr>
+<td>
+<button type ="submit" class="butt">Submit</button>
+<button type ="reset" class="butt">Reset</button>
+</td>
+</tr>
+</table>
+</form>
+</div>
+</center>
+</body>
+</html>

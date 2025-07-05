@@ -1,0 +1,109 @@
+body {
+    background-image: url('./assets/perfect.avif');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    width: 400px;
+    margin: 80px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color:#5b2c2c
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap:20px;
+    
+  }
+
+  .tabs button {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #d19a89;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border: black;
+    border-radius: 12px;
+    justify-content: space-between;
+  }
+
+  .tabs button.active {
+    background-color: #5b2c2c;
+  }
+
+  input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+  }
+
+  button.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color:   rgb(137, 88, 88);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+  button.submit-btn:hover {
+    background-color: rgb(90, 33, 33);
+  }
+
+  .social-login {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .social-login button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .google {
+    background-color: rgb(90, 33, 33);
+    color: white;
+  }
+
+  .linkedin {
+    background-color: rgb(90, 33, 33);
+    color: white;
+  }
+
+  #successMsg, #errorMsg {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  #successMsg {
+    color: green;
+  }
+
+  #errorMsg {
+    color: red;
+  }

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Students>
+    <Student>
+        <RollNumber>101</RollNumber>
+        <Name>Alice Johnson</Name>
+        <Course>Computer Science</Course>
+        <Year>2023</Year>
+        <Marks1>85</Marks1>
+        <Marks2>90</Marks2>
+        <Marks3>88</Marks3>
+        <TotalMarks>263</TotalMarks>
+    </Student>
+    <Student>
+        <RollNumber>102</RollNumber>
+        <Name>Bob Smith</Name>
+        <Course>Information Technology</Course>
+        <Year>2023</Year>
+        <Marks1>80</Marks1>
+        <Marks2>75</Marks2>
+        <Marks3>89</Marks3>
+        <TotalMarks>244</TotalMarks>
+    </Student>
+    <Student>
+        <RollNumber>103</RollNumber>
+        <Name>Charlie Davis</Name>
+        <Course>Electronics</Course>
+        <Year>2022</Year>
+        <Marks1>78</Marks1>
+        <Marks2>85</Marks2>
+        <Marks3>90</Marks3>
+        <TotalMarks>253</TotalMarks>
+    </Student>
+    <Student>
+        <RollNumber>104</RollNumber>
+        <Name>Diana White</Name>
+        <Course>Mechanical Engineering</Course>
+        <Year>2024</Year>
+        <Marks1>88</Marks1>
+        <Marks2>92</Marks2>
+        <Marks3>95</Marks3>
+        <TotalMarks>275</TotalMarks>
+    </Student>
+    <Student>
+        <RollNumber>105</RollNumber>
+        <Name>Edward Green</Name>
+        <Course>Civil Engineering</Course>
+        <Year>2023</Year>
+        <Marks1>70</Marks1>
+        <Marks2>65</Marks2>
+        <Marks3>75</Marks3>
+        <TotalMarks>210</TotalMarks>
+    </Student>
+    <Student>
+        <RollNumber>106</RollNumber>
+        <Name>Fiona Black</Name>
+        <Course>Computer Science</Course>
+        <Year>2024</Year>
+        <Marks1>95</Marks1>
+        <Marks2>97</Marks2>
+        <Marks3>99</Marks3>
+        <TotalMarks>291</TotalMarks>
+    </Student>
+</Students>

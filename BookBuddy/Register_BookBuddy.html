@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="icon" href="./assets/BookBuddyLogo.jpeg">
+    <link rel="stylesheet" href="Register_style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Register to BookBuddy</h2>
+        <form onsubmit="handleSubmit(event)">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" placeholder="Enter your name" class="change1"></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="number" name="age" placeholder="Enter your age" class="change1"></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td><input type="date" class="change1"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="Gender" value="Male"> Male
+                        <input type="radio" name="Gender" value="Female"> Female
+                        <input type="radio" name="Gender" value="Others"> Others
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email ID</td>
+                    <td><input type="email" placeholder="Email Address" class="change1"></td>
+                </tr>
+                <tr>
+                    <td>Mobile No</td>
+                    <td><input type="number" placeholder="Mobile Number" class="change1"></td>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td>
+                        <select>
+                            <option>Select Role</option>
+                            <option>School student</option>
+                            <option>College student</option>
+                            <option>Employee</option>
+                            <option>Home maker</option>
+                            <option>Senior Citizen</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Area of Interest</td>
+                    <td>
+                        <select>
+                            <option>Select Area</option>
+                            <option>Business Applications</option>
+                            <option>Technology</option>
+                            <option>History</option>
+                            <option>Space</option>
+                            <option>Science</option>
+                            <option>Mathematics</option>
+                            <option>Literature</option>
+                            <option>Tales</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Residential Address</td>
+                    <td><input type="text" placeholder="Address" class="change1"></td>
+                </tr>
+                <tr>
+                    <td>About Yourself</td>
+                    <td>
+                        <textarea id="message" name="message" rows="4" cols="50" placeholder="Tell us about yourself" class="change1"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Experience in Reading Books</td>
+                    <td><progress class="progress-bar" value="30" max="100"></progress></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="submit" class="butt">Submit</button>
+                        <button type="reset" class="butt" onclick="confirmsub(event)">Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <p id="messageDisplay"></p>
+        <div class="premium">
+            <a href="premium.html"><h3>Explore Premium Membership Plans</h3></a>
+        </div>
+    </div>
+
+    <script>
+        function myfunction() {
+            document.getElementById('messageDisplay').innerHTML = "Welcome to Book Buddy Community!";
+        }
+
+        function showPopups() {
+            alert("Welcome to Book Buddy!");
+        }
+
+        function confirmsub(event) {
+            alert("Submission cancelled");
+        }
+
+        function validAge(event) {
+            var age = document.querySelector('input[name="age"]').value;
+            if (age < 10) {
+                alert("Sorry... You should be at least 10 years old to register to Book Buddy!");
+                event.preventDefault();
+                return false;
+            } else {
+                alert("Thank you for registering!");
+                return true;
+            }
+        }
+
+        function confirmsubmission(event) {
+            var confirmation = confirm("Are you sure you want to submit the form?");
+            if (!confirmation) {
+                document.write("You are not willing to submit the form.");
+                event.preventDefault();
+                return false;
+            } else {
+                alert("Your responses have been recorded successfully! Thank you...");
+                return true;
+            }
+        }
+
+        function handleSubmit(event) {
+            if (!validAge(event)) return;
+            confirmsubmission(event);
+        }
+    </script>
+</body>
+</html>

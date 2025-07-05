@@ -1,0 +1,10 @@
+order:
+justify-content: Flex-start,Flex-End,space between,space around,space evenly,center
+flex-wrap: nowrap,wrap
+align-items:Flex-start,flex-end,center,baseline<not wrapped>
+align-self:flex-start(align unique items)
+align-content(when contents are wrapped)
+
+REFERENCE:
+
+https://appbrewery.github.io/flex-layout/

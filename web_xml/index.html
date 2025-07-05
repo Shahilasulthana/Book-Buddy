@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="bookbuddy.xsl"?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Loading Book Buddy...</title>
+        <script>
+            // This script will handle the XSLT transformation in the browser
+            function loadXMLDoc(filename) {
+                if (window.ActiveXObject) {
+                    xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+                } else {
+                    xhttp = new XMLHttpRequest();
+                }
+                xhttp.open("GET", filename, false);
+                try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
+                xhttp.send("");
+                return xhttp.responseXML;
+            }
+
+            function displayResult() {
+                xml = loadXMLDoc("bookbuddy.xml");
+                xsl = loadXMLDoc("bookbuddy.xsl");
+                
+                if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
+                    // For IE
+                    ex = xml.transformNode(xsl);
+                    document.open();
+                    document.write(ex);
+                    document.close();
+                } else if (document.implementation && document.implementation.createDocument) {
+                    // For Chrome, Firefox, etc.
+                    xsltProcessor = new XSLTProcessor();
+                    xsltProcessor.importStylesheet(xsl);
+                    resultDocument = xsltProcessor.transformToDocument(xml);
+                    document.replaceChild(
+                        document.importNode(resultDocument.documentElement, true),
+                        document.documentElement
+                    );
+                }
+            }
+
+            window.onload = displayResult;
+        </script>
+    </head>
+    <body>
+        <p>Loading Book Buddy website...</p>
+    </body>
+</html>

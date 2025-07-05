@@ -1,0 +1,15 @@
+<!ELEMENT bookbuddy (slider, content)>
+<!ELEMENT slider (slide+)>
+<!ELEMENT slide (image, title, description)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT content (marquee, sections)>
+<!ELEMENT marquee (#PCDATA)>
+<!ELEMENT sections (section+)>
+<!ELEMENT section (title, subtitle?, text?, items?)>
+<!ELEMENT subtitle (#PCDATA)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT items (item+)>
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST section type CDATA #IMPLIED>

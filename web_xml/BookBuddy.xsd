@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="bookbuddy">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="slider"/>
+                <xs:element ref="content"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="slider">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="slide" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="slide">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="image"/>
+                <xs:element ref="title"/>
+                <xs:element ref="description"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="image" type="xs:string"/>
+    <xs:element name="title" type="xs:string"/>
+    <xs:element name="description" type="xs:string"/>
+    
+    <xs:element name="content">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="marquee"/>
+                <xs:element ref="sections"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="marquee" type="xs:string"/>
+    
+    <xs:element name="sections">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="section" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="section">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="title"/>
+                <xs:element ref="subtitle" minOccurs="0"/>
+                <xs:element ref="text" minOccurs="0"/>
+                <xs:element ref="items" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="subtitle" type="xs:string"/>
+    <xs:element name="text" type="xs:string"/>
+    
+    <xs:element name="items">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="item" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="item" type="xs:string"/>
+</xs:schema>
